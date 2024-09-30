@@ -46,6 +46,8 @@ public class UMSQLManager {
     
     private var db: OpaquePointer?
     
+    public init() { }
+    
     deinit {
         closeDatabase()
     }
