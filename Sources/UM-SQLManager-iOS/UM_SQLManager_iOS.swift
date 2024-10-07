@@ -200,7 +200,7 @@ public extension UMSQLManager {
     }
     
     /// 트랜젝션 롤백
-    private func rollbackTransaction() throws {
+    func rollbackTransaction() throws {
         if sqlite3_exec(db, "ROLLBACK TRANSACTION", nil, nil, nil) != SQLITE_OK {
             throw UMSQLError.rollbackError
         }
